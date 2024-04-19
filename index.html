@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pomodoro Clock</title>
+  <link href="./style.css" rel="stylesheet">
+</head>
+
+<body>
+  <main class="timer-app-container">
+    <header class="timer-header">
+      <h1 class="timer-header-title">Pomodoro Timer</h1>
+      <div class="progress-bar">
+        <div class="progress-indicator" id="progress-indicator"></div>
+      </div>
+    </header>
+    <div id="timer">00:00</div>
+
+    <div class="buttons-container">
+      <button class="button" id="start">Start</button>
+      <button class="button" id="pause">Pause</button>
+      <button class="button" id="reset">Reset</button>
+    </div>
+    <div class="buttons-container">
+      <button class="button full-width" id="open-timer-dialog">Set time</button>
+    </div>
+  </main>
+  <dialog class="dialog" id="set-timer-dialog">
+    <header class="dialog-header">
+      <h2>Set timer In minutes</h2>
+      <button autofocus type="button" class="close-dialog" id="close-dialog">&times;</button>
+    </header>
+    <section class="dialog-body">
+      <div class="timer-input-container">
+        <input type="number" min="1" max="120" id="timer-input" />
+        <button type="button" class="button" id="set-time">Set time</button>
+      </div>
+    </section>
+  </dialog>
+  <audio controls="controls" style="display:none;" id="beep">
+    <source src="/audio/stop.ogg" type="audio/ogg" />
+    <source src="/audio/stop.mp3" type="audio/mp3" />
+  </audio>
+  <script src="./script.js"></script>
+</body>
+
+</html>
