@@ -11,7 +11,10 @@
 <body>
   <main class="timer-app-container">
     <header class="timer-header">
-      <h1 class="timer-header-title">Pomodoro Timer</h1>
+      <div>
+        <h1 class="timer-header-title">Pomodoro Timer</h1>
+        <span id="timer-running-status" class="timer-running-status hide"></span>
+      </div>
       <div class="progress-bar">
         <div class="progress-indicator" id="progress-indicator"></div>
       </div>
@@ -43,7 +46,7 @@
     <source src="/audio/stop.ogg" type="audio/ogg" />
     <source src="/audio/stop.mp3" type="audio/mp3" />
   </audio>
-  <script src="./script.js"></script>
+  <script type="module" src="./script.js"></script>
 </body>
 
 </html>
